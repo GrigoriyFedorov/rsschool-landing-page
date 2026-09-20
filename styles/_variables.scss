@@ -1,0 +1,29 @@
+@use "media" as *;
+
+:root {
+  --text-primary: #403f3d;
+  --text-inverse: #E1D4C9;
+  --text-accent: #B0907A;
+  --background-page: #e1d4c9;
+	--background-container: #665f55;
+	--background-overlay: rgba(64, 63, 61, 0.8);
+  --border-primary: #c1b6ad;
+	--border-inverse: #665f55;
+
+  --font-family-base: "Inter", sans-serif;
+  --container-width: #{rem(1440)};
+  --container-padding-x: #{rem(40)};
+  --section-padding-y: #{rem(100)};
+  --transition-duration: 0.2s;
+}
+
+:root[data-theme="dark"] {
+  --text-primary: #e1d4c9;
+  --text-inverse: #e1d4c9;
+  --text-accent: #b0907a;
+  --background-page: #292826;
+	--background-container: #403f3d;
+	--background-overlay: rgba(41, 40, 38, 0.8);
+  --border-primary: #665f55;
+	--border-inverse: #c1b6ad;
+}
