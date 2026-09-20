@@ -1,0 +1,61 @@
+@use "../meta" as *;
+
+.theme-switch {
+  width: rem(88);
+  height: rem(44);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid var(--border-primary);
+  border-radius: 100px;
+  padding: 4px;
+  background-color: var(--background-page);
+
+  &__icon-wrapper {
+    @include flex-center(true);
+
+    width: rem(36);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition-duration: var(--transition-duration);
+
+    &--sun {
+      background-color: var(--text-accent);
+      color: var(--text-inverse);
+    }
+
+    &--moon {
+      background-color: transparent;
+      color: var(--text-primary);
+    }
+  }
+
+  @include hover {
+    .theme-switch__icon-wrapper--moon {
+      background-color: var(--border-inverse);
+      color: var(--text-inverse);
+    }
+  }
+
+  :root[data-theme="dark"] & {
+    &__icon-wrapper--sun {
+      background-color: transparent;
+    }
+
+    &__icon-wrapper--moon {
+      background-color: var(--text-accent);
+    }
+
+    @include hover {
+      .theme-switch__icon-wrapper--sun {
+        background-color: var(--border-inverse);
+        color: var(--background-overlay);
+      }
+
+      .theme-switch__icon-wrapper--moon {
+        background-color: var(--text-accent);
+      }
+    }
+  }
+}

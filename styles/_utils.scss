@@ -2,7 +2,7 @@
 
 .container {
   max-width: var(--container-width);
-  padding-inline: var(--section-padding-y);
+  padding-inline: var(--container-padding-x);
   margin-inline: auto;
 }
 
@@ -19,14 +19,14 @@
   overflow: hidden !important;
 }
 
-.hidden-mobile {
-  @include mobile {
+.hidden-tablet {
+  @include tablet {
     display: none !important;
   }
 }
 
-.visible-mobile {
-  @include mobile-above {
+.visible-tablet {
+  @include tablet-above {
     display: none !important;
   }
 }

@@ -1,0 +1,30 @@
+@use "../meta" as *;
+
+.burger-button {
+  position: relative;
+  width: rem(44);
+  aspect-ratio: 1;
+  border: 1px solid var(--background-container);
+  border-radius: 50%;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: rem(18);
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 5px;
+  }
+
+  &::before {
+    top: rem(16);
+  }
+
+  &::after {
+    bottom: rem(16);
+  }
+}
