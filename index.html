@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="css/styles.css" />
     <title>Coffee House</title>
     <script>
-      if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
       }
     </script>
   </head>
@@ -81,7 +81,9 @@
               </svg>
             </div>
           </button>
-          <a class="header__menu-item header__catalog-link hidden-tablet" href=""
+          <a
+            class="header__menu-item header__catalog-link hidden-tablet"
+            href=""
             >Menu
             <svg
               class="header__catalog-icon"
@@ -129,6 +131,38 @@
         </div>
       </div>
     </header>
+    <main class="main">
+      <div class="container">
+        <section class="hero">
+          <div class="hero__content">
+            <h1 class="hero__content-title">
+              <span class="hero__content-accent-word">Enjoy</span> premium coffee at our charming cafe
+            </h1>
+            <div class="hero__content-description">
+              <p>
+                With its inviting atmosphere and delicious coffee options, the
+                Coffee House Resource is a popular destination for coffee lovers
+                and those seeking a warm and inviting space to enjoy their
+                favorite beverage.
+              </p>
+            </div>
+            <a class="hero__button" href="">Menu</a>
+          </div>
+          <video
+            class="hero__video"
+            width="1360"
+            height="644"
+            muted
+            autoplay
+            loop
+            playsinline
+          >
+            <source type="video/webm" src="images/hero-video-bg.webm" />
+            <source type="video/mp4" src="images/hero-video-bg.mp4" />
+          </video>
+        </section>
+      </div>
+    </main>
     <dialog class="mobile-overlay visible-tablet" id="mobileOverlay">
       <header class="mobile-overlay__header">
         <a class="mobile-overlay__logo-link logo" href="#">
@@ -191,7 +225,7 @@
           </form>
         </div>
       </header>
-      <body class="mobile-overlay__body">
+      <main class="mobile-overlay__body">
         <nav class="mobile-overlay__menu">
           <ul class="mobile-overlay__menu-list">
             <li class="mobile-overlay__menu-item">
@@ -243,7 +277,7 @@
             </li>
           </ul>
         </nav>
-      </body>
+      </main>
     </dialog>
     <script src="index.js"></script>
   </body>

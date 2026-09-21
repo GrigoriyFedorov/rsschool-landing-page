@@ -209,7 +209,6 @@ svg * {
   src: url(../fonts/Inter_24pt-SemiBoldItalic.woff2) format(woff2);
   font-weight: 600;
   font-style: italic;
-  font-display: swap;
 }
 :root {
   --text-primary: #403f3d;
@@ -272,19 +271,23 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.625rem, 1.8267326733rem + 2.9702970297vw, 4.5rem);
+  font-size: 4.5rem;
+  line-height: 105%;
+}
+@media (max-width: 48rem) {
+  h1 {
+    font-size: clamp(2.25rem, 0.0463917526rem + 9.2783505155vw, 4.5rem);
+  }
 }
 
 h2 {
-  font-size: clamp(2.25rem, 2.1435643564rem + 0.396039604vw, 2.5rem);
+  font-size: clamp(2rem, 0.2860824742rem + 7.2164948454vw, 3.75rem);
+  line-height: 125%;
 }
 
 h3 {
-  font-size: clamp(1.625rem, 1.5185643564rem + 0.396039604vw, 1.875rem);
-}
-
-h4 {
-  font-size: clamp(1.125rem, 1.0717821782rem + 0.198019802vw, 1.25rem);
+  font-size: clamp(1.25rem, 1.0051546392rem + 1.0309278351vw, 1.5rem);
+  line-height: 125%;
 }
 
 .container {
@@ -418,6 +421,9 @@ h4 {
   bottom: 1rem;
 }
 
+.header {
+  padding-bottom: 1.25rem;
+}
 .header__inner {
   padding-top: 1.25rem;
   display: flex;
@@ -541,4 +547,61 @@ h4 {
   line-height: 125%;
   text-align: center;
   color: var(--text-primary);
+}
+
+.hero {
+  position: relative;
+  max-width: 85rem;
+  height: 40.25rem;
+  padding: 6.25rem;
+  margin-bottom: var(section-padding-y);
+}
+@media (max-width: 63.9375rem) {
+  .hero {
+    padding-inline: 3.75rem 0;
+  }
+}
+@media (max-width: 48rem) {
+  .hero {
+    height: 34.5rem;
+    padding: 3.75rem 1rem;
+  }
+}
+.hero__content {
+  max-width: 33.125rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  align-items: start;
+}
+.hero__content-title {
+  font-style: italic;
+  color: var(--text-inverse);
+}
+.hero__content-accent-word {
+  color: var(--text-accent);
+}
+.hero__content-description {
+  color: var(--text-inverse);
+}
+.hero__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 12.5rem;
+  min-height: 4rem;
+  background-color: var(--text-inverse);
+  border-radius: 100px;
+  color: #2d2d2d;
+}
+.hero__video {
+  position: absolute;
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  border-radius: 40px;
 }/*# sourceMappingURL=styles.css.map */

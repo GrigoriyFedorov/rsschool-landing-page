@@ -34,17 +34,21 @@ h3 {
 }
 
 h1 {
-  @include fluid-text(72, 42);
+  font-size: rem(72);
+  line-height: 105%;
+
+  @include mobile {
+    @include fluid-text(72, 36);
+  }
 }
 
 h2 {
-  @include fluid-text(40, 36);
+  @include fluid-text(60, 32);
+  line-height: 125%;
 }
 
 h3 {
-  @include fluid-text(30, 26);
+  @include fluid-text(24, 20);
+  line-height: 125%;
 }
 
-h4 {
-  @include fluid-text(20, 18);
-}

@@ -1,6 +1,8 @@
 @use "../meta" as *;
 
 .header {
+  padding-bottom: rem(20);
+  
   &__inner {
     padding-top: rem(20);
     display: flex;
