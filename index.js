@@ -16,3 +16,12 @@ button.forEach((button) => {
 if (localStorage.getItem("theme") === "dark") {
   html.setAttribute("data-theme", "dark");
 }
+
+const mobileOverlay = document.getElementById('mobileOverlay');
+const navLinks = document.querySelectorAll('.mobile-overlay__menu-link');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileOverlay.close();
+  } )
+})

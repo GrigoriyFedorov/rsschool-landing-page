@@ -37,6 +37,12 @@
           width: 100%;
         }
       }
+
+      &--active {
+        &::before {
+          width: 100%;
+        }
+      }
     }
   }
 

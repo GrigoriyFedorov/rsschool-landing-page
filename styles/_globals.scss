@@ -67,3 +67,12 @@ h3 {
   line-height: 125%;
   color: var(--text-primary);
 }
+
+.visually-h2 {
+  font-size: rem(60);
+  line-height: 125%;
+
+  @include mobile {
+    @include fluid-text(60, 32);
+  }
+}
