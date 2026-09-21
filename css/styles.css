@@ -678,6 +678,18 @@ h3 {
   background-color: var(--text-inverse);
   border-radius: 100px;
   color: #2d2d2d;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+@media (hover: hover) {
+  .hero__button:hover {
+    background-color: var(--text-accent);
+  }
+}
+@media (hover: none) {
+  .hero__button:active {
+    background-color: var(--text-accent);
+  }
 }
 .hero__video {
   position: absolute;
