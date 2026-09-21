@@ -1039,10 +1039,12 @@ h3 {
   border: 1px solid var(--border-primary);
   border-radius: 6.25rem;
   background-color: var(--tabBgColor);
+  color: var(--text-primary);
 }
 .menu__tabs-tab--active {
   --tabBgColor: var(--background-container);
   --tabImgBgColor: var(--background-page);
+  color: var(--text-inverse);
 }
 .menu__tabs-tab-image-wrapper {
   display: inline-flex;
@@ -1057,12 +1059,14 @@ h3 {
   .menu__tabs-tab:hover {
     --tabBgColor: var(--background-container);
     --tabImgBgColor: var(--background-page);
+    color: var(--text-inverse);
   }
 }
 @media (hover: none) {
   .menu__tabs-tab:active {
     --tabBgColor: var(--background-container);
     --tabImgBgColor: var(--background-page);
+    color: var(--text-inverse);
   }
 }
 .menu__catalog {

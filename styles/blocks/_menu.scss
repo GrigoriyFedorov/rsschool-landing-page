@@ -37,10 +37,12 @@
       border: 1px solid var(--border-primary);
       border-radius: rem(100);
       background-color: var(--tabBgColor);
+      color: var(--text-primary);
 
       &--active {
         --tabBgColor: var(--background-container);
         --tabImgBgColor: var(--background-page);
+        color: var(--text-inverse)
       }
 
       &-image-wrapper {
@@ -55,6 +57,7 @@
       @include hover {
         --tabBgColor: var(--background-container);
         --tabImgBgColor: var(--background-page);
+        color: var(--text-inverse)
       }
     }
   }

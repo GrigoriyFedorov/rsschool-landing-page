@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.svg">
     <link rel="stylesheet" href="css/styles.css" />
     <title>Coffee House</title>
     <script>
@@ -54,7 +55,7 @@
             type="button"
             aria-label="Switch the color theme"
           >
-            <div
+            <span
               class="theme-switch__icon-wrapper theme-switch__icon-wrapper--sun"
             >
               <svg
@@ -69,8 +70,8 @@
                   fill="#E1D4C9"
                 />
               </svg>
-            </div>
-            <div
+            </span>
+            <span
               class="theme-switch__icon-wrapper theme-switch__icon-wrapper--moon"
             >
               <svg
@@ -85,7 +86,7 @@
                   fill="#403F3D"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <a
             class="header__menu-item header__menu-item--active header__catalog-link hidden-tablet"
@@ -148,46 +149,47 @@
             <ul class="menu__tabs-list">
               <li class="menu__tabs-item">
                 <button class="menu__tabs-tab menu__tabs-tab--active">
-                  <div class="menu__tabs-tab-image-wrapper">
+                  <span class="menu__tabs-tab-image-wrapper">
                     <img
                       src="images/icons/coffee.svg"
                       alt=""
                       width="20"
                       height="20"
                     />
-                  </div>
+                  </span>
                   Coffee
                 </button>
               </li>
               <li class="menu__tabs-item">
                 <button class="menu__tabs-tab">
-                  <div class="menu__tabs-tab-image-wrapper">
+                  <span class="menu__tabs-tab-image-wrapper">
                     <img
                       src="images/icons/teapot.svg"
                       alt=""
                       width="20"
                       height="20"
                     />
-                  </div>
+                  </span>
                   Tea
                 </button>
               </li>
               <li class="menu__tabs-item">
                 <button class="menu__tabs-tab">
-                  <div class="menu__tabs-tab-image-wrapper">
+                  <span class="menu__tabs-tab-image-wrapper">
                     <img
                       src="images/icons/cake.svg"
                       alt=""
                       width="20"
                       height="20"
                     />
-                  </div>
+                  </span>
                   Dessert
                 </button>
               </li>
             </ul>
           </div>
           <div class="menu__catalog">
+            <h2 class="visually-hidden">Catalog</h2>
             <ul class="menu__catalog-list">
               <li class="menu__catalog-item">
                 <article class="catalog__card card">
@@ -440,7 +442,7 @@
           </div>
           <div class="footer__contacts">
             <h2 class="footer__contacts-text">Contact us</h2>
-            <adress class="footer__contacts-adress">
+            <address class="footer__contacts-adress">
               <ul class="footer__contacts-list">
                 <li class="footer__contacts-item">
                   <a href="#" class="footer__contacts-link" target="_blank">
@@ -505,7 +507,7 @@
                   </div>
                 </li>
               </ul>
-            </adress>
+            </address>
           </div>
         </div>
       </div>
@@ -530,7 +532,7 @@
             type="button"
             aria-label="Switch the color theme"
           >
-            <div
+            <span
               class="theme-switch__icon-wrapper theme-switch__icon-wrapper--sun"
             >
               <svg
@@ -545,8 +547,8 @@
                   fill="#E1D4C9"
                 />
               </svg>
-            </div>
-            <div
+            </span>
+            <span
               class="theme-switch__icon-wrapper theme-switch__icon-wrapper--moon"
             >
               <svg
@@ -561,7 +563,7 @@
                   fill="#403F3D"
                 />
               </svg>
-            </div>
+            </span>
           </button>
           <form class="mobile-overlay__close-button-wrapper" method="dialog">
             <button
