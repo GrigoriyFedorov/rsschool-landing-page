@@ -38,7 +38,8 @@ h1 {
   line-height: 105%;
 
   @include mobile {
-    @include fluid-text(72, 36);
+    @include fluid-text(72, 42);
+    line-height: 115%;
   }
 }
 
