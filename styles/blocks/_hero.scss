@@ -1,19 +1,22 @@
 @use "../meta" as *;
 
 .hero {
-  position: relative;
-  max-width: rem(1360);
-  height: rem(644);
-  padding: rem(100);
-  margin-bottom: var(section-padding-y);
+  margin-bottom: var(--section-padding-y);
 
-  @include tablet {
-    padding-inline: rem(60) 0;
-  }
+  &__inner {
+    position: relative;
+    max-width: rem(1360);
+    height: rem(644);
+    padding: rem(100);
 
-  @include mobile {
-    height: rem(552);
-    padding: rem(60) rem(16);
+    @include tablet {
+      padding-inline: rem(60) 0;
+    }
+
+    @include mobile {
+      height: rem(552);
+      padding: rem(60) rem(16);
+    }
   }
 
   &__content {
@@ -34,9 +37,8 @@
     &-description {
       color: var(--text-inverse);
     }
-
   }
-  
+
   &__button {
     @include flex-center(true);
     min-width: rem(200);

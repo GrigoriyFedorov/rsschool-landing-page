@@ -132,36 +132,170 @@
       </div>
     </header>
     <main class="main">
-      <div class="container">
-        <section class="hero">
-          <div class="hero__content">
-            <h1 class="hero__content-title">
-              <span class="hero__content-accent-word">Enjoy</span> premium coffee at our charming cafe
-            </h1>
-            <div class="hero__content-description">
-              <p>
-                With its inviting atmosphere and delicious coffee options, the
-                Coffee House Resource is a popular destination for coffee lovers
-                and those seeking a warm and inviting space to enjoy their
-                favorite beverage.
-              </p>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__content">
+              <h1 class="hero__content-title">
+                <span class="hero__content-accent-word">Enjoy</span> premium
+                coffee at our charming cafe
+              </h1>
+              <div class="hero__content-description">
+                <p>
+                  With its inviting atmosphere and delicious coffee options, the
+                  Coffee House Resource is a popular destination for coffee
+                  lovers and those seeking a warm and inviting space to enjoy
+                  their favorite beverage.
+                </p>
+              </div>
+              <a class="hero__button" href="">Menu</a>
             </div>
-            <a class="hero__button" href="">Menu</a>
+            <video
+              class="hero__video"
+              width="1360"
+              height="644"
+              muted
+              autoplay
+              loop
+              playsinline
+            >
+              <source type="video/webm" src="images/hero-video-bg.webm" />
+              <source type="video/mp4" src="images/hero-video-bg.mp4" />
+            </video>
           </div>
-          <video
-            class="hero__video"
-            width="1360"
-            height="644"
-            muted
-            autoplay
-            loop
-            playsinline
-          >
-            <source type="video/webm" src="images/hero-video-bg.webm" />
-            <source type="video/mp4" src="images/hero-video-bg.mp4" />
-          </video>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section class="slider">
+        <div class="slider__inner container">
+          <h2 class="slider__title">
+            Choose your <span class="title-accent">favorite</span> coffee
+          </h2>
+          <div class="slider__row">
+            <button
+              class="slider__button slider__button--prev hidden-mobile"
+              type="button"
+              aria-label="Previous slide"
+            >
+              <svg
+                class="slider__button-icon"
+                width="14"
+                height="13"
+                viewBox="0 0 14 13"
+                fill="none"
+              >
+                <path
+                  d="M13 6.5H0.5M6.5 12.5L0.5 6.5L6.5 0.5"
+                  stroke="#403F3D"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="slider__viewport">
+              <div class="slider__track">
+                <div class="slider__slide">
+                  <img
+                    class="slider__slide-img"
+                    src="images/slider/coffee-slider-1.png"
+                    width="480"
+                    height="480"
+                    alt="S’mores Frappuccino"
+                  />
+                  <div class="slider__slide-content">
+                    <h3 class="slider__slide-title">S’mores Frappuccino</h3>
+                    <p class="slider__slide-description">
+                      This new drink takes an espresso and mixes it with brown
+                      sugar and cinnamon before being topped with oat milk.
+                    </p>
+                    <span class="slider__slide-price price">$5.50</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="slider__button slider__button--next hidden-mobile"
+              type="button"
+              aria-label="Previous slide"
+            >
+              <svg
+                class="slider__button-icon"
+                width="14"
+                height="13"
+                viewBox="0 0 14 13"
+                fill="none"
+              >
+                <path
+                  d="M0.5 6.5H13M7 12.5L13 6.5L7 0.5"
+                  stroke="#403F3D"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="slider__pagination">
+            <div class="slider__indicator slider__indicator--active"></div>
+            <div class="slider__indicator"></div>
+            <div class="slider__indicator"></div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__inner container">
+          <h2 class="about__title">
+            Resource is
+            <span class="title-accent">the perfect and cozy place</span> where
+            you can enjoy a variety of hot beverages, relax, catch up with
+            friends, or get some work done.
+          </h2>
+          <div class="about__gallery">
+            <div class="about__column">
+              <div class="about__image-wrapper about__image-wrapper--large">
+                <img
+                  class="about__image"
+                  src="images/about/about-1.webp"
+                  alt="Smiling woman in sunglasses stirring a cup of coffee"
+                  width="660"
+                  height="590"
+                  loading="lazy"
+                />
+              </div>
+              <div class="about__image-wrapper hidden-tablet">
+                <img
+                  class="about__image"
+                  src="images/about/about-2.webp"
+                  alt="Cozy cup of coffee on a table with warm lights background"
+                  height="430"
+                  width="660"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="about__column">
+              <div class="about__image-wrapper hidden-tablet">
+                <img
+                  class="about__image"
+                  src="images/about/about-3.webp"
+                  alt="Man working on a laptop with a cup of coffee"
+                  width="660"
+                  height="430"
+                  loading="lazy"
+                />
+              </div>
+              <div class="about__image-wrapper about__image-wrapper--large">
+                <img
+                  class="about__image"
+                  src="images/about/about-4.webp"
+                  alt="Happy couple hugging and holding coffee cups"
+                  width="660"
+                  height="590"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <dialog class="mobile-overlay visible-tablet" id="mobileOverlay">
       <header class="mobile-overlay__header">

@@ -30,3 +30,10 @@
     display: none !important;
   }
 }
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
