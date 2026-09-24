@@ -1,0 +1,58 @@
+@use "../meta" as *;
+
+.theme-switch {
+  width: rem(88);
+  height: rem(44);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid var(--border-primary);
+  border-radius: 100px;
+  padding: 3px;
+  background-color: var(--background-page);
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: rem(36);
+    height: rem(36);
+    background-color: var(--text-accent);
+    border-radius: 50%;
+    transition-duration: var(--transition-duration);
+  }
+
+  @include hover {
+    &::before {
+      border-radius: 20px;
+      width: rem(41);
+    }
+  }
+
+  &__icon-wrapper {
+    @include flex-center(true);
+
+    width: rem(36);
+    aspect-ratio: 1;
+    z-index: 1;
+
+    &--sun {
+      color: var(--text-inverse);
+    }
+
+    &--moon {
+      color: #403F3D;
+    }
+  }
+
+  :root[data-theme="dark"] & {
+    &::before {
+      transform: translateX(rem(44));
+    }
+
+    @include hover {
+      &::before {
+        transform: translateX(rem(39));
+      }
+    }
+  }
+}
