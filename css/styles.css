@@ -374,11 +374,32 @@ h3 {
   height: 2.75rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  position: relative;
   border: 1px solid var(--border-primary);
   border-radius: 100px;
-  padding: 4px;
+  padding: 3px;
   background-color: var(--background-page);
+}
+.theme-switch::before {
+  content: "";
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: var(--text-accent);
+  border-radius: 50%;
+  transition-duration: var(--transition-duration);
+}
+@media (hover: hover) {
+  .theme-switch:hover::before {
+    border-radius: 20px;
+    width: 2.5625rem;
+  }
+}
+@media (hover: none) {
+  .theme-switch:active::before {
+    border-radius: 20px;
+    width: 2.5625rem;
+  }
 }
 .theme-switch__icon-wrapper {
   display: inline-flex;
@@ -386,51 +407,25 @@ h3 {
   align-items: center;
   width: 2.25rem;
   aspect-ratio: 1;
-  border-radius: 50%;
-  transition-duration: var(--transition-duration);
+  z-index: 1;
 }
 .theme-switch__icon-wrapper--sun {
-  background-color: var(--text-accent);
   color: var(--text-inverse);
 }
 .theme-switch__icon-wrapper--moon {
-  background-color: transparent;
-  color: var(--text-primary);
+  color: #403F3D;
+}
+:root[data-theme=dark] .theme-switch::before {
+  transform: translateX(2.75rem);
 }
 @media (hover: hover) {
-  .theme-switch:hover .theme-switch__icon-wrapper--moon {
-    background-color: var(--border-inverse);
-    color: var(--text-inverse);
+  :root[data-theme=dark] .theme-switch:hover::before {
+    transform: translateX(2.4375rem);
   }
 }
 @media (hover: none) {
-  .theme-switch:active .theme-switch__icon-wrapper--moon {
-    background-color: var(--border-inverse);
-    color: var(--text-inverse);
-  }
-}
-:root[data-theme=dark] .theme-switch__icon-wrapper--sun {
-  background-color: transparent;
-}
-:root[data-theme=dark] .theme-switch__icon-wrapper--moon {
-  background-color: var(--text-accent);
-}
-@media (hover: hover) {
-  :root[data-theme=dark] .theme-switch:hover .theme-switch__icon-wrapper--sun {
-    background-color: var(--border-inverse);
-    color: var(--background-overlay);
-  }
-  :root[data-theme=dark] .theme-switch:hover .theme-switch__icon-wrapper--moon {
-    background-color: var(--text-accent);
-  }
-}
-@media (hover: none) {
-  :root[data-theme=dark] .theme-switch:active .theme-switch__icon-wrapper--sun {
-    background-color: var(--border-inverse);
-    color: var(--background-overlay);
-  }
-  :root[data-theme=dark] .theme-switch:active .theme-switch__icon-wrapper--moon {
-    background-color: var(--text-accent);
+  :root[data-theme=dark] .theme-switch:active::before {
+    transform: translateX(2.4375rem);
   }
 }
 
