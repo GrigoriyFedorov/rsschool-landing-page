@@ -4,6 +4,8 @@ export function initSlider() {
   const sliderBtnPrev = document.querySelector(".slider__button--prev");
   const sliderBtnNext = document.querySelector(".slider__button--next");
   const sliderIndicators = document.querySelectorAll(".slider__indicator");
+
+
   let slideIndex = 0;
 
   const getSlideWidth = () => sliderSlides[0].offsetWidth;
@@ -37,7 +39,8 @@ export function initSlider() {
     observer.observe(slide);
   });
 
-  sliderBtnNext.addEventListener("click", () => {
+  if (sliderBtnNext && sliderBtnPrev) {
+    sliderBtnNext.addEventListener("click", () => {
     slideIndex++;
     if (slideIndex >= sliderSlides.length) {
       slideIndex = 0;
@@ -52,4 +55,5 @@ export function initSlider() {
     }
     sliderTrack.scrollTo(getSlideWidth() * slideIndex, 0);
   });
+  }
 }
