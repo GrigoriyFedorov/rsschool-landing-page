@@ -23,7 +23,25 @@
     }
   }
 
+  &__viewport {
+    max-width: rem(480);
+  }
+
+  &__track {
+    display: flex;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
   &__slide {
+    scroll-snap-align: start;
+    min-width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: rem(20);
