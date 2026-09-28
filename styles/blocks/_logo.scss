@@ -1,0 +1,17 @@
+@use "../meta" as *;
+
+.logo {
+  &__img--dark {
+    display: none;
+  }
+
+  :root[data-theme="dark"] & {
+    &__img {
+      display: none;
+    }
+
+    &__img--dark {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@use "../meta" as *;
+
+.footer {
+  padding-bottom: rem(40);
+
+  &__inner {
+    display: flex;
+    column-gap: rem(100);
+    align-items: center;
+    padding: rem(100);
+    border-radius: rem(40);
+    background-color: var(--background-container);
+
+    @include desktop {
+      column-gap: rem(40);
+    }
+
+    @include tablet {
+      padding-inline: rem(60);
+      flex-direction: column;
+      align-items: start;
+      row-gap: rem(100);
+    }
+
+    @include mobile {
+      padding: rem(60) rem(16);
+      row-gap: rem(40);
+    }
+  }
+
+  &__body {
+    max-width: rem(530);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(40);
+  }
+
+  &__title {
+    color: var(--text-inverse);
+
+    &--accent {
+      font-style: italic;
+      color: var(--text-accent);
+    }
+  }
+
+  &__socials {
+    &-list {
+      display: flex;
+      column-gap: rem(12);
+    }
+
+    &-link {
+      @include flex-center(true);
+
+      width: rem(60);
+      aspect-ratio: 1;
+      border: 1px solid var(--border-primary);
+      border-radius: 100px;
+      color: var(--text-inverse);
+
+      @include hover {
+        background-color: var(--background-page);
+        color: var(--text-primary);
+        border-color: var(--background-page);
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(40);
+    color: var(--text-inverse);
+
+    &-text {
+      font-size: rem(24);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      row-gap: rem(20);
+    }
+
+    &-link,
+    &-shedule {
+      position: relative;
+      display: inline-flex;
+      align-items: start;
+      column-gap: rem(8);
+      font-weight: 600;
+    }
+
+    &-link {
+       &::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 2px;
+        width: 0%;
+        background-color: currentColor;
+        transition-duration: var(--transition-duration);
+      }
+
+       @include hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

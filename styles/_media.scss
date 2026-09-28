@@ -1,0 +1,67 @@
+@use "sass:math";  
+
+$desktop-above: 1441;
+$desktop: 1440;
+
+$tablet-above: 1024;
+$tablet: 1023;
+
+$mobile-above: 769;
+$mobile: 768;
+
+$mobile-s-above: 381;
+$mobile-s: 380;
+
+@function rem($pixel) {
+  @return math.div($pixel, 16) + rem;
+}
+
+@mixin desktop-above {
+  @media (min-width: rem($desktop-above)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: rem($desktop)) {
+    @content;
+  }
+}
+
+@mixin tablet-above {
+  @media (min-width: rem($tablet-above)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: rem($tablet)) {
+    @content;
+  }
+}
+
+@mixin mobile-above {
+  @media (min-width: rem($mobile-above)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: rem($mobile)) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
