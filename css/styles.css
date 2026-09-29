@@ -322,6 +322,10 @@ h3 {
   }
 }
 
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 .container {
   max-width: var(--container-width);
   padding-inline: var(--container-padding-x);
@@ -446,6 +450,7 @@ h3 {
   height: 2px;
   background-color: var(--text-primary);
   border-radius: 5px;
+  transition-duration: var(--transition-duration);
 }
 .burger-button::before {
   top: 1rem;

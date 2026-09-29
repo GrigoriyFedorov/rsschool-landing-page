@@ -76,3 +76,7 @@ h3 {
     @include fluid-text(60, 32);
   }
 }
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
