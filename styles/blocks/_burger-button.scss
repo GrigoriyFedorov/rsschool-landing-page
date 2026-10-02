@@ -18,6 +18,7 @@
     height: 2px;
     background-color: var(--text-primary);
     border-radius: 5px;
+    transition-duration: var(--transition-duration);
   }
 
   &::before {

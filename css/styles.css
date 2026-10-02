@@ -249,6 +249,7 @@ body {
   line-height: 1.5;
   color: var(--text-primary);
   background-color: var(--background-page);
+  transition-duration: var(--transition-duration);
 }
 
 button,
@@ -320,6 +321,10 @@ h3 {
   .visually-h2 {
     font-size: clamp(2rem, 0.2860824742rem + 7.2164948454vw, 3.75rem);
   }
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
 }
 
 .container {
@@ -446,6 +451,7 @@ h3 {
   height: 2px;
   background-color: var(--text-primary);
   border-radius: 5px;
+  transition-duration: var(--transition-duration);
 }
 .burger-button::before {
   top: 1rem;
